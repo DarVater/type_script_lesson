@@ -1,4 +1,4 @@
-import React, {FunctionComponent, useState} from 'react';
+import React, {FunctionComponent} from 'react';
 export enum CardVariant {
     outlined ='outlined',
     primary = 'primapy'
@@ -17,7 +17,6 @@ const Card: FunctionComponent<CardProps> =
         height,
         children
     }) => {
-    const [state, setState] = useState(0);
     return (
         <div style={{
             width,
