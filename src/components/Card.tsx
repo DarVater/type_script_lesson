@@ -8,14 +8,13 @@ interface CardProps{
     height: string;
     variant: CardVariant
     children: React.ReactNode;
-    onClick: (num: number) => void;
 }
 
 const Card: FunctionComponent<CardProps> =
     ({
         width,
         variant,
-        onClick, height,
+        height,
         children
     }) => {
     const [state, setState] = useState(0);
@@ -26,7 +25,6 @@ const Card: FunctionComponent<CardProps> =
             border: variant === CardVariant.outlined ? '1px solid gray' : 'none',
             background: variant === CardVariant.primary ? 'lightgrey' : '',
         }}
-            onClick={() => onClick(state)}
         >
             {children}
         </div>
